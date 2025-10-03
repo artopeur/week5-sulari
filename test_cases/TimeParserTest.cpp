@@ -4,7 +4,7 @@
 
 TEST(ComplexChars, TestCaseCharsCorrectInput) {
     char char_test[] = "R,700,Y,200,G,200";
-    ASSERT_EQ(checkChars(char_test), -1);
+    ASSERT_EQ(checkChars(char_test), 0);
 }
 TEST(ComplexChars, TestCaseCharsNullValue) {
     ASSERT_EQ(checkChars(NULL), CHARACTERS_NULL_ERROR);

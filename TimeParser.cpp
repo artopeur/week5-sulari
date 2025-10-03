@@ -48,10 +48,10 @@ int time_parse(char *time) {
 
 checkChars(char *characters) {
 	if(characters == NULL) {
-		return 0;
+		return -1;
 	}
 	else {
-		return 0;
+		return -1;
 	}
-	return 0;
+	return -1;
 }
