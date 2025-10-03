@@ -8,7 +8,7 @@ TEST(TimeParserTest, TestCaseCorrectTime) {
 
     // Test with correct time string
     char time_test[] = "141205";
-    ASSERT_EQ(time_parse(time_test),0);
+    ASSERT_EQ(time_parse(time_test),51125);
 
 }
 TEST(timeParserTest, TestCaseIncorrectTime) {
