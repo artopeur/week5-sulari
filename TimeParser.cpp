@@ -45,3 +45,13 @@ int time_parse(char *time) {
 
 	return seconds;
 }
+
+checkChars(char *characters) {
+	if(characters == NULL) {
+		return 0;
+	}
+	else {
+		return 0;
+	}
+	return 0;
+}

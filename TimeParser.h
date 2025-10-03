@@ -5,9 +5,12 @@
 #define TIME_LEN_ERROR      -1
 #define TIME_ARRAY_ERROR    -2
 #define TIME_VALUE_ERROR    -3
+#define WRONG_CHARS_ERROR   -4
+#define CHARACTERS_NULL_ERROR -5
 
 using namespace std;
 
 int time_parse(char *time);
+int checkChars(char *characters);
 
 #endif
