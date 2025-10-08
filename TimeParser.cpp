@@ -4,6 +4,7 @@
 
 // time format: HHMMSS (6 characters)
 int time_parse(char *time) {
+	
 	if(strlen(time) > 6) {
 		return TIME_ARRAY_ERROR;
 	}
@@ -19,7 +20,11 @@ int time_parse(char *time) {
 	}
 	// Parse values from time string
 	// For example: 124033 -> 12hour 40min 33sec
-    int values[3];
+    int test = checkChars(time);
+	if(!test) {
+		return test;
+	}
+	int values[3];
 	values[2] = atoi(time+4); // seconds
 	time[4] = 0;
 	values[1] = atoi(time+2); // minutes
@@ -48,10 +53,42 @@ int time_parse(char *time) {
 
 checkChars(char *characters) {
 	if(characters == NULL) {
-		return -1;
+		return CHARACTERS_NULL_ERROR;
 	}
 	else {
-		return -1;
+		if(checkIfNumber(characters[0])) {
+			if(checkIfNumber(characters[0]) != true) {
+				return WRONG_CHARS_ERROR;
+			};
+			return 0;
+		}
+		else {
+			return WRONG_CHARS_ERROR;
+		}
+	}
+	return -1;
+}
+char checkIfNumber(char character) {
+	switch(character) {
+		case '0': return '0';
+		case '1': return '1';
+		case '2': return '2';
+		case '3': return '3';
+		case '4': return '4';
+		case '5': return '5';
+		case '6': return '6';
+		case '7': return '7';
+		case '8': return '8';
+		case '9': return '9';
+		case 'R': return true;
+		case 'Y': return true;
+		case 'G': return true;
+		case 'T': return true;
+		case 'J': return true;
+		case 'L': return true;
+		case 'M': return true;
+		case 'N': return true;
+		case 'D':return true;
 	}
 	return -1;
 }

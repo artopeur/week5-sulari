@@ -10,7 +10,7 @@ TEST(ComplexChars, TestCaseCharsNullValue) {
     ASSERT_EQ(checkChars(NULL), CHARACTERS_NULL_ERROR);
 }
 TEST(ComplexChars, TestCaseCharsWrongInput) {
-    char char_test[] = "A, 700, B, 800, C, 9000";
+    char char_test[] = "A,700, B,800, C,9000";
     ASSERT_EQ(checkChars(char_test), WRONG_CHARS_ERROR);
 }
 
