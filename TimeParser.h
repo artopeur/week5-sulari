@@ -12,5 +12,5 @@ using namespace std;
 
 int time_parse(char *time);
 int checkChars(char *characters);
-
+char checkIfNumber(char);
 #endif
